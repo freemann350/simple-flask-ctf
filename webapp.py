@@ -3,11 +3,11 @@ import os
 import base64
 
 app = Flask(__name__)
-scenario = os.getenv('SCENARIO', '1')
+scenario = os.getenv('SCENARIO', "1")
 
 @app.route('/')
 def index():
-    if scenario == '1':
+    if scenario == "1":
         content = """
         <!DOCTYPE html>
         <html lang="en">
@@ -22,7 +22,7 @@ def index():
         </body>
         </html>
         """
-    elif scenario == '2':
+    elif scenario == "2":
         content = """
         <!DOCTYPE html>
         <html lang="en">
@@ -39,7 +39,7 @@ def index():
         </body>
         </html>
         """
-    elif scenario == '3':
+    elif scenario == "3":
         content = """
         <!DOCTYPE html>
         <html lang="en">
@@ -54,7 +54,7 @@ def index():
         </body>
         </html>
         """
-    elif scenario == '4':
+    elif scenario == "4":
         content = """
         <!DOCTYPE html>
         <html lang="en">
@@ -68,7 +68,7 @@ def index():
         </body>
         </html>
         """
-    elif scenario == '5':
+    elif scenario == "5":
         encoded_flag = base64.b64encode(os.getenv('FLAG', 'No flag set').encode()).decode()
         content = """
         <!DOCTYPE html>
@@ -90,7 +90,7 @@ def index():
 
     return render_template_string(content, flag=os.getenv('FLAG', 'No flag set'))
 
-if scenario == '3':
+if scenario == "3":
     @app.route('/static/style.css')
     def style():
         flag = os.getenv('FLAG', 'No flag set')
@@ -101,7 +101,7 @@ if scenario == '3':
         /* Flag: {flag} */
         """
 
-if scenario == '4':
+if scenario == "4":
     @app.route('/hidden-endpoint')
     def hidden_flag():
         flag = os.getenv('FLAG', 'No flag set')
