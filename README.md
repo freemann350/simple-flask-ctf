@@ -19,7 +19,7 @@ Created as a test bed for one of my repositories, [K8SecLabs](https://https://gi
 
 ## Environment Variables
 
-- `FLAG`: The flag to be captured by participants. Default: `CTF35f3224b5a78932f1c0161a932dd310137d38107e4c4da0d26948bd041ff3a92
+- `FLAG`: The flag to be captured by participants. Default: `CTF35f3224b5a78932f1c0161a932dd310137d38107e4c4da0d26948bd041ff3a92`
 - `SCENARIO`: The scenario to be used. Default: `1`
 
 ## Usage
@@ -33,7 +33,8 @@ Created as a test bed for one of my repositories, [K8SecLabs](https://https://gi
 
 1. Clone the repository: 
 ```
-git clone <repository_url> cd <repository_directory>
+git clone https://github.com/freemann350/simple-flask-ctf
+cd simple-flask-ctf
 ```
 2. Build the Docker image:
 ```sh
